@@ -59,6 +59,7 @@ public class Contact {
         return result;
     }
 
+
     @Override
     public String toString() {
         return "Contact{" +
