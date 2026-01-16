@@ -67,8 +67,7 @@ public class Main {
 
                     Contact contact = new Contact(enteredName, enteredPhone, enteredEmail, enteredGroup);
 
-                    if (!contacts.contains(contact)) {
-                        contacts.add(contact);
+                    if (contacts.add(contact)) {
                         System.out.println("Новый контакт: " + contact + " - был добавлен");
                     } else {
                         System.out.println("Такой контакт уже есть в списке");
