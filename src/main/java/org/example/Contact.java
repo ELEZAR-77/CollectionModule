@@ -23,6 +23,10 @@ public class Contact {
         return id;
     }
 
+    public static void makeIdZero() {
+        idCounter = 0L;
+    }
+
     public String getName() {
         return name;
     }
