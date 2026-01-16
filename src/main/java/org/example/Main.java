@@ -84,6 +84,11 @@ public class Main {
 
                 case (2):
                     boolean found = false;
+                    if (contacts.isEmpty()) {
+                        System.out.println("Список пуст!");
+                        Contact.makeIdZero();
+                        break;
+                    }
                     contacts.forEach(System.out::println);
                     System.out.println("Введите id контакта для удаления: ");
                     int id = Integer.parseInt(scanner.nextLine());
