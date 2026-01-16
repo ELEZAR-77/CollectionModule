@@ -117,7 +117,7 @@ public class Main {
 
                     while (iterator.hasNext()) {
                         Contact hasName = iterator.next();
-                        if (hasName.getName().equals(scanner.nextLine())) {
+                        if (scanner.nextLine().equals(hasName.getName())) {
                             found = true;
                             System.out.println(hasName);
                             break;
