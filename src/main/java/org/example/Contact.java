@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Contact {
     private static Long idCounter = 0L;
-    private Long id;
+    private final Long id;
     private final String name;
     private final String phone;
     private final String email;
@@ -60,7 +60,6 @@ public class Contact {
     public int hashCode() {
         return Objects.hash(getName(), getPhone(), getEmail(), getGroup());
     }
-
 
     @Override
     public String toString() {
