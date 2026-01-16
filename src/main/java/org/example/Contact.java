@@ -54,11 +54,7 @@ public class Contact {
 
     @Override
     public int hashCode() {
-        int result = 11;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (phone != null ? phone.hashCode() : 0);
-        result = 31 * result + (email != null ? email.hashCode() : 0);
-        return result;
+        return Objects.hash(getName(), getPhone(), getEmail(), getGroup());
     }
 
 
