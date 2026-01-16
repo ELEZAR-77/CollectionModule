@@ -46,8 +46,10 @@ public class Contact {
 
         Contact other = (Contact) object;
 
-        return ((Objects.equals(name, other.name)) && (Objects.equals(phone, other.phone)))
-                && (Objects.equals(email, other.email));
+        return Objects.equals(name, other.name)
+                && Objects.equals(phone, other.phone)
+                && Objects.equals(email, other.email)
+                && Objects.equals(group, other.group);
     }
 
     @Override
