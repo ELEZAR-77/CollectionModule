@@ -19,7 +19,7 @@ public class Main {
                 new Contact("Татьяна", "+7-901-222-33-44", "tb@mail.com", "Работа")
         );
 
-        Set<Contact> contacts = new HashSet<>(listContacts);
+        Set<Contact> contacts = new LinkedHashSet<>(contactList);
         Map<String, List<Contact>> contactGroup = new HashMap<>();
         Iterator<Contact> iterator = contacts.iterator();
         Scanner scanner = new Scanner(System.in);
