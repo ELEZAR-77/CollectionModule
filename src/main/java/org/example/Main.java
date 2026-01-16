@@ -2,11 +2,10 @@ package org.example;
 
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) {
-        List<Contact> listContacts = List.of(
+        List<Contact> contactList = List.of(
                 new Contact("Иван", "+7-900-111-22-33", "ivan.petrov@mail.com", "Друзья"),
                 new Contact("Анна", "+7-900-222-33-44", "anna.smirnova@mail.com", "Работа"),
                 new Contact("Сергей", "+7-900-333-44-55", "sergey.ivanov@mail.com", "Семья"),
@@ -24,19 +23,10 @@ public class Main {
         Iterator<Contact> iterator = contacts.iterator();
         Scanner scanner = new Scanner(System.in);
 
-//        contactGroup = contacts.stream().collect(Collectors.groupingBy(
-//                Contact::getGroup,
-//                Collectors.toList()
-//        ));
         for (Contact contact : contacts) {
             contactGroup
                     .computeIfAbsent(contact.getGroup(), key -> new ArrayList<>())
                     .add(contact);
-        }
-
-
-        for (Map.Entry<String, List<Contact>> n : contactGroup.entrySet()) {
-            if (n.getKey().equals("Семья")) System.out.println(n);
         }
 
         while (true) {
@@ -111,6 +101,7 @@ public class Main {
                         break;
                     }
                     break;
+
                 case (3):
                     if (contacts.isEmpty()) {
                         System.out.println("Список контактов пуст!");
