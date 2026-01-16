@@ -129,9 +129,7 @@ public class Main {
                         Contact hasName = iterator.next();
                         if (hasName.getName().equals(scanner.nextLine())) {
                             found = true;
-                            iterator.remove();
-                            contactGroup.remove(hasName.getGroup());
-                            System.out.println("Контакт с именем: " + hasName.getName() + " - был удален");
+                            System.out.println(hasName);
                             break;
                         }
                     }
